@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    <link rel="stylesheet" href="~/css/style.css">
+}
+@model User
+
+<div class="text-center">
+    <header>
+        <h1 class="">Register to this Cool Site!</h1>
+        <h4><a href="/login">Login</a></h4>
+    </header>
+
+    <form asp-action="Register" asp-asp-controller="Home" method="post">
+        <div class="row">
+            <div class="col">
+                <span asp-validation-for="FirstName"></span>
+                <label asp-for="FirstName" class="form-label"></label>
+                <input asp-for="FirstName" class="form-control">
+            </div>
+            <div class="col">
+                <span asp-validation-for="LastName"></span>
+                <label asp-for="LastName" class="form-label"></label>
+                <input asp-for="LastName" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span asp-validation-for="Email"></span>
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <span asp-validation-for="Password"></span>
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control">
+            </div>
+            <div class="col">
+                <span asp-validation-for="ConfirmPassword"></span>
+                <label asp-for="ConfirmPassword" class="form-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control">
+            </div>
+            </div>
+            <div class="submitButton">
+                <button type="submit" class="btn btn-outline-primary">Sign up Now</button>
+            </div>
+    </form>
+
+</div>

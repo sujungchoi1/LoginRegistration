@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Home Page";
+    <link rel="stylesheet" href="~/css/style.css">
+}
+@model LoginUser
+@* @model User *@
+
+<div class="text-center">
+    <header>
+        <h1 class="">Log In to this Cool Site!</h1>
+        <h4><a href="/">Register</a></h4>
+    </header>
+
+    <form asp-action="Login" asp-asp-controller="Home" method="post" style="background-color: rgb(230,230,250, 0.5);">
+        <div class="row">
+            <div class="col">
+                <label asp-for="Email" class="form-label"></label>
+                <span asp-validation-for="Email"></span>
+                <input asp-for="Email" class="form-control">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <label asp-for="Password" class="form-label"></label>
+                <span asp-validation-for="Password"></span>
+                <input asp-for="Password" class="form-control">
+            </div>
+            
+        </div>
+            <div class="submitButton">
+                <button type="submit" class="btn btn-outline-primary">Log In Now</button>
+            </div>
+    </form>
+
+</div>
